@@ -49,8 +49,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: Eduardppsq1
-          password: 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
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: build and push image
         uses: docker/build-push-action@v7
         with:
